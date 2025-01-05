@@ -2,12 +2,12 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     overflow: hidden;
-    background-color: #f3f4f6; /* Jemný světlý odstín */
-    color: #333; /* Tmavě šedá barva textu */
+    background-color: #f3f4f6;
+    color: #333;
 }
 
 header {
-    background-image: linear-gradient(to right, #6a11cb, #2575fc); /* Moderní gradient */
+    background-image: linear-gradient(to right, #6a11cb, #2575fc);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,15 +16,15 @@ header {
     color: white;
     font-size: 36px;
     position: sticky;
-    top: 0; /* Sticky header */
+    top: 0;
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header button {
     height: 60px;
     width: 160px;
-    background-color: #10c10d; /* Zářivá zelená */
+    background-color: #10c10d;
     border-radius: 8px;
     border: none;
     color: white;
@@ -34,7 +34,7 @@ header button {
 }
 
 header button:hover {
-    background-color: #0b9509; /* Tmavší zelená při najetí myší */
+    background-color: #0b9509;
 }
 
 .grid-container {
@@ -42,12 +42,12 @@ header button:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     max-width: 1200px;
-    margin: 30px auto; /* Centrovaní s odskokem od vrchu */
+    margin: 30px auto;
     padding: 0 20px;
 }
 
 .box {
-    background-color: #ffffff; /* Bílý podklad */
+    background-color: #ffffff;
     color: #333;
     text-align: center;
     font-size: 14px;
@@ -65,7 +65,7 @@ header button:hover {
 }
 
 .box:hover {
-    transform: translateY(-10px); /* Zvýraznění při najetí myší */
+    transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -75,7 +75,7 @@ header button:hover {
 }
 
 .box button {
-    background-color: #ff4d4d; /* Červené tlačítko */
+    background-color: #ff4d4d;
     color: white;
     border: none;
     border-radius: 6px;
@@ -86,7 +86,7 @@ header button:hover {
 }
 
 .box button:hover {
-    background-color: #cc0000; /* Tmavší červená při najetí myší */
+    background-color: #cc0000;
 }
 
 @media (max-width: 768px) {
@@ -114,8 +114,8 @@ header button:hover {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 12px;
-    background-color: #ffffff; /* Bílý podklad */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Výraznější stín */
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     width: 300px;
     height: auto;
     color: #333;
@@ -138,7 +138,7 @@ header button:hover {
 }
 
 #formContainer button {
-    background-color: #2575fc; /* Modrá */
+    background-color: #2575fc;
     color: white;
     border: none;
     border-radius: 8px;
@@ -149,12 +149,12 @@ header button:hover {
     transition: background-color 0.3s ease;
 }
 
-#formContainer #status{
+#formContainer #status {
     height: 30px;
 }
 
 #formContainer button:hover {
-    background-color: #0f5efc; /* Tmavší modrá */
+    background-color: #0f5efc;
 }
 
 #closeButton {
