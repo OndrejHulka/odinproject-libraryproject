@@ -13,7 +13,7 @@ function addBookToLibrary(name, author, pages, status) {
   const newBook = new Book(name, author, pages, status);
   myLibrary.push(newBook);
   console.log(myLibrary);
-  addBookToDisplay(newBook); // Zobrazení knihy na stránce
+  addBookToDisplay(newBook); 
 }
 
 function displayEdit() {
@@ -30,7 +30,6 @@ function displayEdit() {
   const form = document.createElement('form');
   form.id = 'myForm';
 
-  // Přidání prvků formuláře
   let titleLabel = document.createElement('label');
   titleLabel.setAttribute('for', 'title');
   titleLabel.textContent = 'Title: ';
@@ -74,14 +73,14 @@ function displayEdit() {
   buttonSubmit.type = 'submit';
   buttonSubmit.textContent = 'Add Book';
 
-  // Zavírací tlačítko
+ 
   let buttonClose = document.createElement('button');
-  buttonClose.type = 'button'; // Typ button pro zavírací tlačítko
+  buttonClose.type = 'button'; 
   buttonClose.id = 'closebtn';
   buttonClose.textContent = 'Close';
 
   buttonClose.addEventListener('click', function () {
-    formContainer.style.display = 'none'; // Skryje formContainer
+    formContainer.style.display = 'none'; 
   });
 
   form.addEventListener('submit', function (event) {
@@ -94,7 +93,7 @@ function displayEdit() {
 
     addBookToLibrary(title, author, pages, status);
 
-    formContainer.style.display = 'none'; // Skryje formContainer po odeslání
+    formContainer.style.display = 'none'; 
   });
 
   form.appendChild(titleLabel);
@@ -106,7 +105,7 @@ function displayEdit() {
   form.appendChild(statusLabel);
   form.appendChild(statusInput);
   form.appendChild(buttonSubmit);
-  form.appendChild(buttonClose); // Přidání zavíracího tlačítka
+  form.appendChild(buttonClose); 
 
   formContainer.appendChild(form);
   formContainer.style.display = 'flex';
@@ -129,7 +128,7 @@ function addBookToDisplay(newBook) {
   changeStatusButton.textContent = 'change status'
   
   closeButton.addEventListener('click', function () {
-    // Najdi index odpovídajícího objektu v poli myLibrary
+   
     const index = myLibrary.findIndex(function (book) {
       return (
         book.name === newBook.name &&
@@ -139,23 +138,23 @@ function addBookToDisplay(newBook) {
       );
     });
 
-    // Pokud kniha existuje, odstraň ji
+    
     if (index !== -1) {
-      myLibrary.splice(index, 1); // Odstranění z pole
+      myLibrary.splice(index, 1); 
       console.log(`Kniha "${newBook.name}" byla odstraněna z knihovny.`);
     }
 
-    // Odstranění odpovídajícího DOM elementu
+    
     box.remove();
   });
 
   changeStatusButton.addEventListener('click', function () {
     if (newBook.status === '✅') {
-        newBook.status = '❌'; // Změna hodnoty status v objektu
-        status.textContent = `status: ${newBook.status}`; // Aktualizace DOM
+        newBook.status = '❌'; 
+        status.textContent = `status: ${newBook.status}`; 
     } else {
-        newBook.status = '✅'; // Změna hodnoty status v objektu
-        status.textContent = `status: ${newBook.status}`; // Aktualizace DOM
+        newBook.status = '✅'; 
+        status.textContent = `status: ${newBook.status}`; 
     }
   });
 
@@ -169,7 +168,7 @@ function addBookToDisplay(newBook) {
   gridContainer.appendChild(box);
 }
 
-// Funkce pro kontrolu checkboxu
+
 function isCheckbox(value) {
   return value.checked ? '✅' : '❌';
 }
