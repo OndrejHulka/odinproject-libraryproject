@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background-color: #f3f4f6; /* Jemný světlý odstín */
+    color: #333; /* Tmavě šedá barva textu */
+}
+
+header {
+    background-image: linear-gradient(to right, #6a11cb, #2575fc); /* Moderní gradient */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    height: 15vh;
+    color: white;
+    font-size: 36px;
+    position: sticky;
+    top: 0; /* Sticky header */
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
+}
+
+header button {
+    height: 60px;
+    width: 160px;
+    background-color: #10c10d; /* Zářivá zelená */
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #0b9509; /* Tmavší zelená při najetí myší */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto; /* Centrovaní s odskokem od vrchu */
+    padding: 0 20px;
+}
+
+.box {
+    background-color: #ffffff; /* Bílý podklad */
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+    height: 220px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    gap: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Zvýraznění při najetí myší */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box h2 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.box button {
+    background-color: #ff4d4d; /* Červené tlačítko */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box button:hover {
+    background-color: #cc0000; /* Tmavší červená při najetí myší */
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#formContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #ffffff; /* Bílý podklad */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Výraznější stín */
+    width: 300px;
+    height: auto;
+    color: #333;
+    gap: 20px;
+}
+
+#formContainer label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#formContainer input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#formContainer button {
+    background-color: #2575fc; /* Modrá */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formContainer #status{
+    height: 30px;
+}
+
+#formContainer button:hover {
+    background-color: #0f5efc; /* Tmavší modrá */
+}
+
+#closeButton {
+    background-color: #ff4d4d;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+#closeButton:hover {
+    background-color: #cc0000;
+}
+
+#closebtn {
+    margin-left: 90px;
+}
